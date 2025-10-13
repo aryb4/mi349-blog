@@ -1,9 +1,11 @@
-/* About page logo image */
+/* --- ABOUT PAGE LOGO --- */
 .about-logo {
     max-width: 150px;
     display: block;
     margin: 16px auto;
 }
+
+/* --- GLOBAL STYLES --- */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #f9f9f9;
@@ -12,7 +14,7 @@ body {
     padding: 0;
 }
 
-h1{
+h1 {
     color: green;
     background: yellow;
 }
@@ -65,29 +67,41 @@ footer {
     text-align: center;
 }
 
+/* --- FORM STYLING (FIXED MESSAGE BOX CENTERING) --- */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 form label {
     font-weight: bold;
+    margin-top: 8px;
 }
 
 form input[type="text"],
 form input[type="email"],
 form select,
 form textarea {
-    width: 80%;
-    padding: 8px;
-    margin: 8px 0;
+    width: 100%;
+    max-width: 500px; /* prevents stretching */
+    padding: 10px 12px;
+    margin: 10px 0;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 1em;
     box-sizing: border-box;
+    display: block;
 }
 
 form textarea {
-    min-height: 80px;
+    min-height: 120px;
     resize: vertical;
 }
 
 form button {
+    margin-top: 12px;
     background: #2d3e50;
     color: #fff;
     border: none;
@@ -103,19 +117,22 @@ form button:hover {
     color: #222;
 }
 
+/* --- RESPONSIVE FORM ADJUSTMENTS --- */
 @media (max-width: 600px) {
     main {
         padding: 12px;
     }
+
     form input[type="text"],
     form input[type="email"],
-    form textarea {
+    form textarea,
+    form select {
         width: 100%;
+        max-width: 100%;
     }
 }
 
-/* Additional rule sets to reach 20+ */
-
+/* --- ARTICLE, TABLE, IMAGE, AND TYPOGRAPHY --- */
 article {
     margin-bottom: 40px;
     padding-bottom: 24px;
@@ -184,18 +201,20 @@ code, pre {
     border-radius: 3px;
 }
 
-/* Three column Flexbox layout */
+/* --- THREE-COLUMN FLEX LAYOUT --- */
 .three-col-layout {
     display: flex;
     gap: 24px;
     margin: 32px 0;
 }
+
 .three-col-layout .side {
     flex: 1 1 0;
     background: #f4f4f4;
     padding: 16px;
     border-radius: 6px;
 }
+
 .three-col-layout .center {
     flex: 2 1 0;
     background: #fff;
@@ -204,7 +223,7 @@ code, pre {
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
-/* Floated image with caption */
+/* --- FLOATED IMAGE WITH CAPTION --- */
 figure.float-img-left,
 figure.float-img-right,
 figure.float-img {
@@ -212,6 +231,7 @@ figure.float-img {
     margin: 0 0 12px 20px;
     max-width: 40%;
 }
+
 .img-caption {
     display: block;
     font-size: 0.95em;
@@ -220,32 +240,38 @@ figure.float-img {
     margin-top: 4px;
 }
 
-/* Multi-column form layout using Flexbox */
+/* --- FLEXBOX FORM LAYOUT (OPTIONAL MULTI-COLUMN) --- */
 .form-flex {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
 }
+
 .form-flex .form-group {
     flex: 1 1 200px;
     min-width: 200px;
     display: flex;
     flex-direction: column;
 }
+
 .form-flex .form-group label {
     margin-bottom: 4px;
 }
+
 .form-flex .form-group input,
 .form-flex .form-group select,
 .form-flex .form-group textarea {
     width: 100%;
 }
 
+/* --- RESPONSIVE THREE-COLUMN ADJUSTMENT --- */
 @media (max-width: 900px) {
     .three-col-layout {
         flex-direction: column;
     }
-    .three-col-layout .side, .three-col-layout .center {
+
+    .three-col-layout .side,
+    .three-col-layout .center {
         max-width: 100%;
     }
 }
