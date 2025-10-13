@@ -1,3 +1,9 @@
+/* About page logo image */
+.about-logo {
+    max-width: 150px;
+    display: block;
+    margin: 16px auto;
+}
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #f9f9f9;
