@@ -176,3 +176,72 @@ code, pre {
     padding: 2px 6px;
     border-radius: 3px;
 }
+
+/* Three column Flexbox layout */
+.three-col-layout {
+    display: flex;
+    gap: 24px;
+    margin: 32px 0;
+}
+.three-col-layout .side {
+    flex: 1 1 0;
+    background: #f4f4f4;
+    padding: 16px;
+    border-radius: 6px;
+}
+.three-col-layout .center {
+    flex: 2 1 0;
+    background: #fff;
+    padding: 16px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+/* Floated image with caption */
+.float-img-left {
+    float: left;
+    margin: 0 20px 12px 0;
+    max-width: 40%;
+}
+.float-img-right {
+    float: right;
+    margin: 0 0 12px 20px;
+    max-width: 40%;
+}
+.img-caption {
+    display: block;
+    font-size: 0.95em;
+    color: #666;
+    text-align: center;
+    margin-top: 4px;
+}
+
+/* Multi-column form layout using Flexbox */
+.form-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.form-flex .form-group {
+    flex: 1 1 200px;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+.form-flex .form-group label {
+    margin-bottom: 4px;
+}
+.form-flex .form-group input,
+.form-flex .form-group select,
+.form-flex .form-group textarea {
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .three-col-layout {
+        flex-direction: column;
+    }
+    .three-col-layout .side, .three-col-layout .center {
+        max-width: 100%;
+    }
+}
