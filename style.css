@@ -59,6 +59,10 @@ h2, h3, h4 {
     color: #2d3e50;
 }
 
+h5 {
+    color: white;
+}
+
 footer {
     background: #f1f1f1;
     color: #333;
