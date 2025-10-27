@@ -53,6 +53,12 @@ main {
 
 h1 {
     color: white;
+    font-size: 2rem; /* set a clear base size for top headings */
+}
+
+
+h5 {
+    font-size: 2rem;
 }
 
 h2, h3, h4 {
