@@ -275,3 +275,81 @@ figure.float-img {
         max-width: 100%;
     }
 }
+
+/* Small-screen adjustments: ensure readability and prevent overflow */
+@media (max-width: 600px) {
+    body {
+        font-size: 16px; /* increase base size for readability */
+        line-height: 1.5;
+    }
+
+    main {
+        margin: 16px;
+        padding: 16px;
+    }
+
+    /* Make floated figures stack and be full-width on small screens */
+    figure.float-img-left,
+    figure.float-img-right,
+    figure.float-img {
+        float: none;
+        margin: 0 0 16px 0;
+        max-width: 100%;
+    }
+
+    .img-caption {
+        text-align: left;
+    }
+
+    /* Forms: full width and properly padded */
+    form {
+        width: 100%;
+        max-width: 100%;
+        padding: 16px;
+    }
+
+    .three-col-layout {
+        gap: 12px;
+    }
+}
+
+/* Very small screens / narrow phones */
+@media (max-width: 480px) {
+    header {
+        padding: 16px 8px;
+    }
+
+    nav ul {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    .three-col-layout .side,
+    .three-col-layout .center {
+        padding: 12px;
+    }
+
+    /* Small footnote style */
+    .small-note {
+        font-size: 0.9rem;
+        color: #666;
+        margin-top: 12px;
+    }
+
+    /* Author address formatting */
+    .author-address div {
+        margin-bottom: 4px;
+    }
+}
+
+/* Small utilities */
+.small-note {
+    font-size: 0.95rem;
+    color: #666;
+    margin-top: 12px;
+}
+
